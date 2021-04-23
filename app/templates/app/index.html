@@ -12,6 +12,9 @@
 
 <body>
     <h1 align="center">Registration Form</h1>
+    {% if err %}
+        <h3 style="color: red; text-align: center">{{err}}</h3>
+    {% endif %}
     <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
         <table align="center" border="2" cellspacing="0" cellpadding="8">
             <tr>
